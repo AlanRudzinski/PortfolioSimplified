@@ -1,0 +1,16 @@
+@import 'mixins';
+
+
+$main-orange: #E84F1C;
+$main-grey: #1d1d1b;
+$white: #FBFBFB;
+$blue: #7D83FF;
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
