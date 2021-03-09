@@ -17,6 +17,7 @@
     "sass": "^1.26.10"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "emailjs-com": "^2.6.4"
   }
 }
