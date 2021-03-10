@@ -1,0 +1,62 @@
+@import '../global';
+@import '../mixins';
+
+body {
+    background-color: $main-grey;
+}
+
+.firstWrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: $main-orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: red 1px solid;
+    padding-bottom: 100px;
+    
+    &__text {
+        display: inline-block;
+        // border: green 1px solid;
+        max-width: 70%;
+        margin: 50px;
+        font-family: 'Play', sans-serif;
+        @include fluid-type(320px, 1800px, 10px, 50px);
+        a {
+            color: $main-orange;
+            text-decoration: underline;
+        }
+    }
+    &__svg {
+        // border: blue 1px solid;
+        border-left: $main-orange 2px solid;
+        padding-left: 20px;
+        margin: 50px;
+    }
+
+}
+
+#mailSvg {
+    width: 140px;
+    display: block;
+}
+
+#linkedinSvg {
+    width: 140px;
+    display: block;
+}
+
+.downArrowContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border: red 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+#lineDown {
+    width: 100px;
+}

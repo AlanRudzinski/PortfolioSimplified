@@ -6,8 +6,6 @@ import './scss/pages/index.scss';
 
 const app = () => {
     PortraitAnimations();
-    // emailJsInit();
-
 }
 
 app();
