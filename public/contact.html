@@ -62,11 +62,38 @@
         </div>
         <div class="downArrowContainer">
         <span>To fill the contact form scroll down</span>
-        <svg version="1.1" id="lineDown" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
-            <polygon fill="white" points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093 		"/>
-       </svg>
+        <a href="#contactForm">
+            <svg version="1.1" id="lineDown" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+                <polygon fill="#E7DFC6" points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093 		"/>
+            </svg>
+        </a>
         </div>
+    </div>
+    <div id="contactForm" class="secondWrapper">
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi inventore nam dolores deserunt, incidunt temporibus quisquam beatae aperiam voluptatibus repellat sit nostrum distinctio sint. Repudiandae ullam dolorum ad autem perspiciatis quas a voluptatem natus asperiores. Numquam minima voluptas voluptatibus voluptatum deserunt iure assumenda, porro sint dolore similique quibusdam, incidunt ex?
+        </p>
+        <form class="contact-form">
+            <ul class="contact-form__list">
+                <input type="hidden" name="contact_number">
+                <li>
+                    <label for="name">Your name:</label>
+                    <input type="text" name="user_name" id="name" autocomplete="off" required>
+                </li>
+                <li>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" name="user_email" id="mail" autocomplete="off" required>
+                </li>
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea name="user_message" id="msg" autocomplete="off" required></textarea>
+                </li>
+                <li class="form-button">
+                    <button type="submit">send a message</button>
+                </li>
+            </ul>
+        </form>
     </div>
 <script src="../src/contact.js"></script>
 </body>

@@ -1,6 +1,10 @@
 @import '../global';
 @import '../mixins';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $main-grey;
 }
@@ -13,7 +17,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: red 1px solid;
+    // border: red 1px solid;
     padding-bottom: 100px;
     
     &__text {
@@ -52,11 +56,115 @@ body {
     bottom: 0;
     left: 0;
     width: 100vw;
-    border: red 1px solid;
+    // border: red 1px solid;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 #lineDown {
     width: 100px;
+    animation-duration: 3s;
+    animation-name: scrollDown;
+    animation-iteration-count: infinite;
+}
+
+.secondWrapper {
+    margin: 0 auto;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 100px;
+    & .text {
+        color: $main-orange;
+        text-align: center;
+    }
+}
+
+.contact-form {
+    margin-top: 4rem;
+    width: 600px;
+    // @include sm-phone {
+    //     width: 280px;
+    // }
+    // @include phone {
+    //     width: 350px;
+    // }
+    // @include tablet {
+    //     width: 500px;
+    // }
+
+    &__list li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        color: $main-orange;
+        & label {
+            width: 150px;
+            padding-top: 5px;
+        }
+        & input, textarea {
+            color: $main-orange;
+            background-color: transparent;
+            width: 450px;
+            border: none;
+            height: 40px;
+            outline: none;
+            
+        }
+        & textarea {
+            height: 100px;
+            resize: none;
+        }
+    }
+}
+
+#name {
+    border-left: 2px $main-orange solid;
+    border-bottom: 2px $main-orange solid;
+}
+
+#mail {
+    border-left: 2px $main-orange solid;
+}
+
+#msg {
+    border-left: 2px $main-orange solid;
+    border-top: 2px $main-orange solid;
+}
+
+.form-button {
+    display: flex;
+    justify-content: end;
+    & button {
+        background-color: transparent;
+        padding: .5rem;
+        color: $main-orange;
+        border: 1px solid $main-orange;
+        width: 450px;
+        margin: 0 0 0 auto;
+        text-align: left;
+        &:hover {
+            background-color: $main-orange;
+            color: $main-grey;
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes scrollDown {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
