@@ -18,6 +18,13 @@
 
 .aboutMe {
     height: 100vh;
+    color: $main-orange;
+    & p {
+        padding-top: 10vh;
+        width: 70%;
+        margin: 0 auto;
+        @include fluid-type(320px, 1800px, 8px, 40px);
+    }
 }
 
 span {
