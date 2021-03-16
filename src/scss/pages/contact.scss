@@ -1,10 +1,6 @@
 @import '../global';
 @import '../mixins';
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: $main-grey;
 }
@@ -12,56 +8,128 @@ body {
 .firstWrapper {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    padding-top: 70px;
+
+    // margin: 0 auto;
+    // position: relative;
+    // height: 100vh;
+    // width: 70vw;
+    // color: $main-orange;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // // border: red 1px solid;
+    // padding-bottom: 100px;
+    // @media(min-width: 700px) {
+    //     flex-direction: row;
+    // }
+    
+    // &__text {
+    //     display: inline-block;
+    //     // border: green 1px solid;
+    //     max-width: 70%;
+    //     margin: 50px;
+    //     font-family: 'Play', sans-serif;
+    //     @include fluid-type(320px, 1800px, 14px, 50px);
+    //     a {
+    //         color: $main-orange;
+    //         text-decoration: underline;
+    //     }
+    // }
+    // &__svg {
+    //     // border: blue 1px solid;
+    //     border-top: $main-orange 2px solid;
+    //     border-left: none;
+
+    //     padding-left: 20px;
+    //     padding-top: 20px;
+    //     margin: 50px;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-around;
+    //     align-items: center;
+    //     width: 70%;
+        
+    //     @media(min-width: 700px) {
+    //         border-left: $main-orange 2px solid;
+    //         border-top: none;
+    //         flex-direction: column;
+
+    //     }
+    // }
+
+}
+
+.wrapper-textsvg {
+    margin: 50px auto 0;
+    position: relative;
+    width: 70vw;
     color: $main-orange;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    // border: red 1px solid;
-    padding-bottom: 100px;
+    height: 50vh;
+    @media(min-width: 700px) {
+        flex-direction: row;
+        height: 40vh;
+
+    }
     
     &__text {
         display: inline-block;
-        // border: green 1px solid;
         max-width: 70%;
-        margin: 50px;
         font-family: 'Play', sans-serif;
-        @include fluid-type(320px, 1800px, 10px, 50px);
+        margin: 0 0 50px 0;
+        @include fluid-type(320px, 1800px, 14px, 50px);
         a {
             color: $main-orange;
             text-decoration: underline;
         }
+        @media(min-width: 700px) {
+            margin: 0 50px 0 0;
+        }
     }
     &__svg {
-        // border: blue 1px solid;
-        border-left: $main-orange 2px solid;
-        padding-left: 20px;
-        margin: 50px;
+        border-top: $main-orange 2px solid;
+        border-left: none;
+        padding: 20px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;        
+        @media(min-width: 700px) {
+            padding: 0 0 0 20px;
+            border-left: $main-orange 2px solid;
+            border-top: none;
+            flex-direction: column;
+            min-height: 100%;
+        }
     }
-
 }
 
 #mailSvg {
-    width: 140px;
-    display: block;
+    display: block; 
+    width: 60px;
+    @media(min-width: 500px) {
+        width: 90px;
+    }
+    @media(min-width: 1000px) {
+        width: 140px;
+    }
 }
 
 #linkedinSvg {
-    width: 140px;
+    width: 60px;
     display: block;
-}
-
-.downArrowContainer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    // border: red 1px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
+    @media(min-width: 500px) {
+        width: 90px;
+    }
+    @media(min-width: 1000px) {
+        width: 140px;
+    }
 }
 
 #lineDown {
@@ -74,7 +142,7 @@ body {
 .secondWrapper {
     margin: 0 auto;
     height: 100vh;
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -83,21 +151,22 @@ body {
     & .text {
         color: $main-orange;
         text-align: center;
+        @include fluid-type(320px, 1800px, 12px, 30px);
     }
 }
 
 .contact-form {
     margin-top: 4rem;
-    width: 600px;
-    // @include sm-phone {
-    //     width: 280px;
-    // }
-    // @include phone {
-    //     width: 350px;
-    // }
-    // @include tablet {
-    //     width: 500px;
-    // }
+    width: 300px;
+    font-size: 12px;
+    @media(min-width: 450px){
+        width: 400px;
+        font-size: 16px;
+    }
+    @media(min-width: 700px){
+        width: 600px;
+        font-size: 20px;
+    }
 
     &__list li {
         display: flex;
@@ -146,9 +215,16 @@ body {
         padding: .5rem;
         color: $main-orange;
         border: 1px solid $main-orange;
-        width: 450px;
         margin: 0 0 0 auto;
         text-align: left;
+        width: 225px;
+        @media(min-width: 450px){
+            width: 300px;
+            font-size: 16px;
+        }
+        @media(min-width: 700px){
+            width: 450px;
+        }
         &:hover {
             background-color: $main-orange;
             color: $main-grey;

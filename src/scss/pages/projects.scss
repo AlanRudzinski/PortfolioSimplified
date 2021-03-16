@@ -4,13 +4,13 @@
 
 
 .project_list {
-    margin-top: 40vh;
+    margin-top: 30vh;
     width: 70%;
     display: grid;
     justify-items: flex-start;
     align-items: center;
     font-family: 'Kumar One', cursive;
-    padding-left: 100px;
+    padding-left: 10vw;
     &__item {
         max-height: 160px;
         transition: ease-in-out .2s;
@@ -19,11 +19,11 @@
             transform: translateX(80px);
         }
         & h2 {
-            @include fluid-type(320px, 1800px, 10px, 100px);
+            @include fluid-type(320px, 1800px, 28px, 100px);
             color: white;
         }
         & span {
-            @include fluid-type(320px, 1800px, 4px, 40px);
+            @include fluid-type(320px, 1800px, 12px, 40px);
         }
 
     }

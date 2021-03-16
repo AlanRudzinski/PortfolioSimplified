@@ -1,14 +1,22 @@
 @import '../global';
 @import '../mixins';
 
+.about-body {
+    overflow-x: hidden;
+    background-color: $main-grey;
+    position: relative;
+}
+
 .firstWrapper-about {
+    margin: 0 auto;
     color: $main-orange;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    @include fluid-type(320px, 1800px, 20px, 120px);
+    position: relative;
+    @include fluid-type(320px, 1800px, 40px, 120px);
     & span {
         display: inline-block;
         width: 60%;
@@ -17,13 +25,14 @@
 }
 
 .aboutMe {
+    overflow-x: hidden;
     height: 100vh;
     color: $main-orange;
     & p {
-        padding-top: 10vh;
-        width: 70%;
+        padding-top: 15vh;
+        width: 60%;
         margin: 0 auto;
-        @include fluid-type(320px, 1800px, 8px, 40px);
+        @include fluid-type(320px, 1800px, 18px, 35px);
     }
 }
 

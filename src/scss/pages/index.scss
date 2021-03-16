@@ -11,17 +11,24 @@ body {
     height: 100vh;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .portrait {
+    display: none;
     width: 40%;
     position: relative;
-    height: 100%;
+    height: $svg-height;
+    top: calc(50vh - (#{$svg-height}/2));
+
     & > svg {
         position: absolute;
         left: 0;
-        top: calc(50vh - (#{$svg-height}/2));
         height: $svg-height;
+    }
+    @media(min-width: 950px) {
+        display: block;
+        
     }
 }
 
@@ -31,13 +38,35 @@ body {
     justify-items: center;
     align-items: center;
     font-family: 'Kumar One', cursive;
-    padding-left: 100px;
-    @include fluid-type(320px, 1800px, 20px, 150px);
+    padding-left: 10vw;
+    @include fluid-type(320px, 1800px, 50px, 150px);
     &__list {
         display: flex;
         flex-direction: column;
         &__item {
-            max-height: 160px;
+            max-height: 70px;
+            margin-bottom: 70px;
+            @media(min-width: 450px) {
+                max-height: 100px;
+            }
+
+            @media(min-width: 680px) {
+                max-height: 130px;
+            }
+
+            @media(min-width: 1300px) {
+                max-height: 160px;
+                margin-bottom: 50px;
+            }
+
+            @media(min-width: 1700px) {
+                max-height: 190px;
+                margin-bottom: 20px;
+            }
+            // @media(min-width: 700px) {
+            //     max-height: 160px;
+            //     margin-bottom: 0;
+            // }
             transition: ease-in-out .2s;
             display: flex;
             flex-direction: column;
@@ -60,38 +89,42 @@ body {
 
 #portrait__line-down {
     position: absolute;
-    top: 468px;
+    top: 385px;
     left: 235px;
 }
 
 #portrait__line-down-left {
     position: absolute;
-    top: 430px;
+    top: 345px;
     left: -998px;
 }
 
 #portrait__line-top-left {
     position: absolute;
-    top: -150px;
-    left: -1295px;
+    top: -268px;
+    left: -877px;
 }
 
 #portrait__line-left {
     position: absolute;
-    left: -1340px;
-    top: 10px;
+    left: -1338px;
+    top: -100px;
 }
 
 #portrait__line-top-right {
     position: absolute;
     top: -93px;
     left: 322px;
+    display: block;
+
 }
 
 #portrait__line-down-right {
     position: absolute;
-    top: 201px;
+    top: 120px;
     left: 375px;
+    display: block;
+
 }
 
 svg {

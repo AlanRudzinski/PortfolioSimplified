@@ -1,4 +1,4 @@
-import './scss/app.scss';
+import './scss/global.scss';
 import './scss/pages/projects.scss';
 
 const app = () => {
