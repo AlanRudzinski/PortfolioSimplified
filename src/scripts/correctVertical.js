@@ -42,7 +42,6 @@ function correct(line, link, con) {
     const distancePoint = getPoints(line, 2).y
     let moveValue = distancePoint + getAbsolutePosition(line).top - getAbsolutePosition(link).bot + con;
     // let moveValue = distancePoint + GetAbsolutePosition(link).bot - GetAbsolutePosition(line).top  + 5;
-    console.log(link, moveValue)
 
     const points = {
         firstPoint: getPoints(line, 2),
