@@ -9,4 +9,4 @@ export default (el) => {
         right: rect.right + scrollLeft, 
         width: rect.width,
         element: el }
-}
+};
