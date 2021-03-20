@@ -1,15 +1,8 @@
 import getAbsolutePosition from './getAbsolutePosition'
 
 export default () => {
-
-    try {
-       
-        correct(document.querySelector('#portrait__line-down-left'), document.querySelector('#contact-link'), 50)
-        correct(document.querySelector('#portrait__line-top-left'), document.querySelector('#about-link'), 380)
-    
-    } catch (error) {
-       console.log(error) 
-    }
+    correct(document.querySelector('#portrait__line-down-left'), document.querySelector('#contact-link'), 50)
+    correct(document.querySelector('#portrait__line-top-left'), document.querySelector('#about-link'), 380)
 
 }
 
@@ -46,15 +39,7 @@ export default () => {
 // }
 
 function correct(line, link, con) {
-    let distancePoint;
-
-    try {
-        distancePoint = getPoints(line, 2).y        
-    } catch (error) {
-        console.log(error, distancePoint)
-    }
-
-
+    const distancePoint = getPoints(line, 2).y
     let moveValue = distancePoint + getAbsolutePosition(line).top - getAbsolutePosition(link).bot + con;
     // let moveValue = distancePoint + GetAbsolutePosition(link).bot - GetAbsolutePosition(line).top  + 5;
 
@@ -74,13 +59,7 @@ function correct(line, link, con) {
 
 
 function getPoints(line, point = 1) {
-
-    try {
-        return line.firstElementChild.points[line.firstElementChild.points.length - point];
-    } catch (error) {
-        console.log(error, line)
-    }
-
+    return line.firstElementChild.points[line.firstElementChild.points.length - point];
 }
 
 function modifyHeight(element, value){
