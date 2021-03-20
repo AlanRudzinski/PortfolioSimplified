@@ -1,5 +1,5 @@
 // import emailJsInit from './scripts/emailJsInit';
-
+import 'regenerator-runtime/runtime'
 import PortraitAnimations from './scripts/animatePortrait';
 import correctVertical from './scripts/correctVertical';
 import mobileAndTabletCheck from './scripts/checkTouchScreen';
