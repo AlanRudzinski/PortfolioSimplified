@@ -9,10 +9,10 @@ import './scss/pages/index.scss';
 const app = () => {
     PortraitAnimations();
     correctVertical();
-    console.log(window.mobileAndTabletCheck())
-    if(window.mobileAndTabletCheck()) {
-        document.getElementById("about-link").style.color = "green";
-    }
+    // console.log(window.mobileAndTabletCheck())
+    // if(window.mobileAndTabletCheck()) {
+    //     document.getElementById("about-link").style.color = "green";
+    // }
 }
 
 app();
