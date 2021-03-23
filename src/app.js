@@ -2,17 +2,22 @@
 import 'regenerator-runtime/runtime'
 import PortraitAnimations from './scripts/animatePortrait';
 import correctVertical from './scripts/correctVertical';
-import mobileAndTabletCheck from './scripts/checkTouchScreen';
+import isTouchScreen from './scripts/isTouchScreen';
 import './scss/global.scss';
 import './scss/pages/index.scss';
 
 const app = () => {
     PortraitAnimations();
     correctVertical();
-    console.log(window.mobileAndTabletCheck())
-    if(window.mobileAndTabletCheck()) {
-        document.getElementById("about-link").style.color = "green";
+    const touchArea = document.querySelector(".mobile-tap-area");
+    if(isTouchScreen()) {
+        touchArea.addEventListener('touchstart', function onFirstTouch() {
+            touchArea.classList.add('hide');
+            document.querySelector('.navigation__list').classList.add('animate-navigation')
+            touchArea.removeEventListener('touchstart', onFirstTouch, false);
+        }, false)
+    } else {
+        touchArea.classList.add('hide');
     }
 }
-
 app();
