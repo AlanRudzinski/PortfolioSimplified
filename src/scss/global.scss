@@ -24,6 +24,7 @@ html {
 body {
     background-color: $main-grey;
     position: relative;
+    text-rendering: optimizeLegibility;
 }
 
 p, button, label, input, span, h2 {
