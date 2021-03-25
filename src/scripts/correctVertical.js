@@ -1,8 +1,8 @@
 import getAbsolutePosition from './getAbsolutePosition'
 
 export default () => {
-    correct(document.querySelector('#portrait__line-down-left'), document.querySelector('#contact-link'), 50)
-    correct(document.querySelector('#portrait__line-top-left'), document.querySelector('#about-link'), 380)
+    correct(document.querySelector('#portrait__line-down-left'), document.querySelector('#contact-link'), 150)
+    correct(document.querySelector('#portrait__line-top-left'), document.querySelector('#about-link'), 500)
 
 }
 

@@ -10,55 +10,6 @@ body {
     height: 100vh;
     padding-top: 70px;
 
-    // margin: 0 auto;
-    // position: relative;
-    // height: 100vh;
-    // width: 70vw;
-    // color: $main-orange;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-    // // border: red 1px solid;
-    // padding-bottom: 100px;
-    // @media(min-width: 700px) {
-    //     flex-direction: row;
-    // }
-    
-    // &__text {
-    //     display: inline-block;
-    //     // border: green 1px solid;
-    //     max-width: 70%;
-    //     margin: 50px;
-    //     font-family: 'Play', sans-serif;
-    //     @include fluid-type(320px, 1800px, 14px, 50px);
-    //     a {
-    //         color: $main-orange;
-    //         text-decoration: underline;
-    //     }
-    // }
-    // &__svg {
-    //     // border: blue 1px solid;
-    //     border-top: $main-orange 2px solid;
-    //     border-left: none;
-
-    //     padding-left: 20px;
-    //     padding-top: 20px;
-    //     margin: 50px;
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-around;
-    //     align-items: center;
-    //     width: 70%;
-        
-    //     @media(min-width: 700px) {
-    //         border-left: $main-orange 2px solid;
-    //         border-top: none;
-    //         flex-direction: column;
-
-    //     }
-    // }
-
 }
 
 .wrapper-textsvg {
@@ -184,6 +135,7 @@ body {
             border: none;
             height: 40px;
             outline: none;
+            padding: 10px;
             
         }
         & textarea {

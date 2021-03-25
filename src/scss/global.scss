@@ -27,10 +27,20 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-p, button, label, input, span, h2 {
+p, button, label, input, span, h2, textarea {
     font-family: 'Play', sans-serif;
     color: $main-orange;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+    box-shadow: 0 0 0 30px $main-grey inset !important;;
+ -webkit-box-shadow: 0 0 0 30px $main-grey inset !important;
+}
+
 
 .logo {
     color: $main-orange;
@@ -68,5 +78,36 @@ p, button, label, input, span, h2 {
     & span {
         @include fluid-type(320px, 1800px, 10px, 24px);
         text-align: center;
+    }
+}
+
+.slide-on-hover {
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    &:hover {
+        transform: translateX(40px);
+    }
+}
+
+.slide-text-on-load {
+    animation: .6s cubic-bezier(0.2, 0.6, 0.2, 1) slideTop;
+    animation-fill-mode: backwards;
+}
+
+.delay1 {
+    animation-delay: .4s;
+}
+
+.delay2 {
+    animation-delay: .8s;
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

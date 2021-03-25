@@ -32,59 +32,76 @@ body {
     }
 }
 
-.navigation{
+.navigation {
     width: 60%;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: 'Kumar One', cursive;
-    padding-left: 10vw;
-    @include fluid-type(320px, 1800px, 50px, 150px);
+    @include fluid-type(320px, 1800px, 40px, 120px);
     &__list {
         display: flex;
         flex-direction: column;
-        &__item {
-            max-height: 70px;
-            margin-bottom: 70px;
-            @media(min-width: 450px) {
-                max-height: 100px;
-            }
-
-            @media(min-width: 680px) {
-                max-height: 130px;
-            }
-
-            @media(min-width: 1300px) {
-                max-height: 160px;
-                margin-bottom: 50px;
-            }
-
-            @media(min-width: 1700px) {
-                max-height: 190px;
-                margin-bottom: 20px;
-            }
-            // @media(min-width: 700px) {
-            //     max-height: 160px;
-            //     margin-bottom: 0;
-            // }
-            transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            & a {
-                transform: translateY(0%);
-                transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
-            }
-            &:hover {
-                transform: translateX(80px);
-                & a {
-                    transform: translateY(-100%);
-                    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
-                }
-            }
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 20%;
+        & > li {
+            display: block;
+            padding: 0;
+            margin-bottom: 50px;
+            text-align: left;
         }
     }
+
 }
+
+// .navigation{
+//     &__list {
+//         display: flex;
+//         flex-direction: column;
+//         &__item {
+//             max-height: 70px;
+//             margin-bottom: 70px;
+//             @media(min-width: 450px) {
+//                 max-height: 100px;
+//             }
+
+//             @media(min-width: 680px) {
+//                 max-height: 130px;
+//             }
+
+//             @media(min-width: 1300px) {
+//                 max-height: 160px;
+//                 margin-bottom: 50px;
+//             }
+
+//             @media(min-width: 1700px) {
+//                 max-height: 190px;
+//                 margin-bottom: 20px;
+//             }
+//             // @media(min-width: 700px) {
+//             //     max-height: 160px;
+//             //     margin-bottom: 0;
+//             // }
+//             transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+//             display: flex;
+//             flex-direction: column;
+//             overflow: hidden;
+//             & a {
+//                 transform: translateY(0%);
+//                 transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+//             }
+//             &:hover {
+//                 transform: translateX(80px);
+//                 & a {
+//                     transform: translateY(-100%);
+//                     transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 #portrait__line-down {
@@ -181,6 +198,114 @@ svg {
     }
 
 };
+
+#about-link > a {
+    &:hover {
+        &::after {
+            content: "About";
+        }
+    }
+    &::after {
+        content: "Hello.";
+    }
+}
+
+#projects-link > a {
+    &:hover {
+        &::after {
+            content: "Projects";
+        }
+    }
+    &::after {
+        content: "I am";
+    }
+}
+
+#contact-link > a {
+    &:hover {
+        &::after {
+            content: "Contact";
+        }
+    }
+    &::after {
+        content: "Alan";
+    }
+}
+
+#contact-link.animate-change-text > a {
+    &::after {
+        display: block;
+        animation: slideTopContact;
+        animation-fill-mode: forwards;
+        animation-duration: .6s;
+        animation-delay: .8s
+    }
+};
+
+#projects-link.animate-change-text > a {
+    &::after {
+        display: block;
+        animation: slideTopProjects;
+        animation-fill-mode: forwards;
+        animation-duration: .6s;
+        animation-delay: .4s
+    }
+};
+
+#about-link.animate-change-text > a {
+    &::after {
+        display: block;
+        animation: slideTopAbout;
+        animation-fill-mode: forwards;
+        animation-duration: .6s;
+    }
+};
+
+@keyframes slideTopContact {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+        content: "Contact";
+
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        content: "Contact";
+    }
+}
+
+
+@keyframes slideTopProjects {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+        content: "Projects";
+
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        content: "Projects";
+    }
+}
+
+
+@keyframes slideTopAbout {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+        content: "About";
+
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        content: "About";
+    }
+}
+
+
 
 @keyframes scrollDown {
     from {
