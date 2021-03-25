@@ -11,49 +11,15 @@
     @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
       & {
         font-size: $min-font-size;
+        line-height: $min-font-size;
         @media screen and (min-width: $min-vw) {
           font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+          line-height: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
         }
         @media screen and (min-width: $max-vw) {
           font-size: $max-font-size;
+          line-height: $max-font-size;
         }
       }
     }
   }
-
-// $sm-phone_width: 360px;
-// // $md-phone_width: 450px;
-// $phone_width: 600px;
-// $tablet_width: 950px;
-// $desktop_width: 1600px;
-
-
-// @mixin sm-phone {
-//   @media (max-width: #{$sm-phone_width - 1px}) {
-//     @content;
-//   }
-// }
-
-// @mixin phone {
-//   @media (min-width: #{$sm-phone_width}) and (max-width: #{$phone_width - 1px}) {
-//     @content;
-//   }
-// }
-
-// @mixin tablet {
-//   @media (min-width: #{$phone_width}) and (max-width: #{$tablet_width - 1px}) {
-//     @content;
-//   }
-// }
-
-// @mixin desktop {
-//   @media (min-width: #{$tablet_width}) and (max-width: #{$desktop_width - 1px}) {
-//     @content;
-//   }
-// }
-
-// @mixin lg-desktop {
-//   @media (min-width: #{$desktop_width}) {
-//     @content;
-//   }
-// }

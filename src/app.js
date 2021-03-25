@@ -9,15 +9,18 @@ import './scss/pages/index.scss';
 const app = () => {
     PortraitAnimations();
     correctVertical();
+
     const touchArea = document.querySelector(".mobile-tap-area");
     if(isTouchScreen()) {
         touchArea.addEventListener('touchstart', function onFirstTouch() {
             touchArea.classList.add('hide');
-            document.querySelector('.navigation__list').classList.add('animate-navigation')
+            const linksList = document.querySelectorAll('.navigation__list__link');
+            Array.from(linksList).forEach(el => el.classList.add('animate-change-text'))
             touchArea.removeEventListener('touchstart', onFirstTouch, false);
         }, false)
     } else {
         touchArea.classList.add('hide');
     }
+
 }
 app();
