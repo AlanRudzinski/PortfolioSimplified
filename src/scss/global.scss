@@ -39,6 +39,8 @@ input:-webkit-autofill:active
 {
     box-shadow: 0 0 0 30px $main-grey inset !important;;
  -webkit-box-shadow: 0 0 0 30px $main-grey inset !important;
+ color: $main-orange;
+
 }
 
 
@@ -47,19 +49,25 @@ input:-webkit-autofill:active
     position: fixed;
     top: 40px;
     right: 20px;
-    width: 88px;
     font-size: 16px;
     overflow: hidden;
     transition: ease-in-out .3s;
     z-index: 1000;
+    width: 250px;
+    display: flex;
+    justify-content: flex-end;
     & h1 {
         & a {
+            display: inline-block;
             font-family: 'Kumar One', cursive;
             color: $main-orange;
+            &:hover::after {
+                content: "alan.dev";
+            }
+            &::after {
+                content: "alan";
+            }
         }
-    }
-    &:hover {
-        width: 180px;
     }
 }
 
@@ -87,6 +95,14 @@ input:-webkit-autofill:active
         transform: translateX(40px);
     }
 }
+.slide-on-hover-reverse {
+    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+    &:hover {
+        transform: translateX(-20px);
+    }
+}
+
+
 
 .slide-text-on-load {
     animation: .6s cubic-bezier(0.2, 0.6, 0.2, 1) slideTop;
