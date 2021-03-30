@@ -1,0 +1,38 @@
+@import '../mixins';
+
+.wrapper {
+    margin: 0 auto;
+    width: 60%;
+};
+
+.project-name {
+    margin-top: 40vh;
+    margin-bottom: 0px;
+    font-family: 'Kumar One', cursive;
+    @include fluid-type(320px, 1800px, 30px, 54px);
+};
+
+.project-tags {
+    display: inline-block;
+    width: 100%;
+    @include fluid-type(320px, 1800px, 6px, 18px);
+    opacity: .5;
+};
+
+.project-image {
+    margin-top: 100px;
+    width: 100%;
+};
+
+.project-description {
+    @include fluid-type(320px, 1800px, 12px, 28px);
+    font-family: 'Play', sans-serif;
+    line-height: 170%;
+
+};
+
+.section-title {
+    margin: 100px 0;
+    font-family: 'Kumar One', cursive;
+    @include fluid-type(320px, 1800px, 20px, 36px);
+};
