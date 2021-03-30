@@ -27,7 +27,7 @@
 .project-description {
     @include fluid-type(320px, 1800px, 12px, 28px);
     font-family: 'Play', sans-serif;
-    line-height: 170%;
+    line-height: 190% !important;
 
 };
 
