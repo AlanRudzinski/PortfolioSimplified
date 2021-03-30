@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet"> 
+    <title>Alan Rudzinski</title>
+    <link rel="shortcut icon" type="image/png" href="../../src/static/favicon.png"/>
 </head>
 <body>
-    promyk
+    <div class="wrapper">
+        <header>
+            <h1 class="project-name">Akademia Promyk</h1>
+            <span class="project-tags">#gatsbyjs #styledcomponents #datoCMS #githubActions </span>
+            <!-- <span class="project-description">Polish kindergarden "Akademia Promyk"</span> -->
+
+        </header>
+        <img class="project-image" src="../../src/static/promyk.png" alt="Image of a kindergarten website">
+    
+        <h2 class="section-title">About</h2>
+        <p class="project-description">Akademia Promyk is Polish kindergarten. I created a website which main focus was design matching the theme of the website and good advertisment and showing good sides of the object.
+            To maximalize advertising potential I had to focus on good SEO (I aimed for 100/100 in Google Lighthouse audit).
+            Important requirement of this website is possibility to edit content by non-technical person with simple use of CMS.
+            One of the most important upsides of this kindergarten is colorful garden and the second one are really interesting activities - to show this impressive aspects interactive gallery is nessecary.
+        </p>
+        <img class="project-image" src="../../src/static/promykGarden.png" alt="Image of a garden in a kindergarten">
+        <h2 class="section-title">Technologies</h2>
+        <p class="project-description">
+            I decided to use GatsbyJS because of its impressive SEO potential and good optimization of images. 
+            To manage content of the website I used DatoCMS combining with GitHub Actions to trigger build website on the server.
+        </p>
+    </div>
+    <script src="../../src/projectDescription.js"></script>
+
 </body>
 </html>
