@@ -89,6 +89,13 @@ input:-webkit-autofill:active
     }
 }
 
+#lineDown {
+    width: 100px;
+    animation-duration: 3s;
+    animation-name: scrollDown;
+    animation-iteration-count: infinite;
+}
+
 .slide-on-hover {
     transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
     &:hover {
@@ -125,5 +132,17 @@ input:-webkit-autofill:active
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes scrollDown {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(0);
     }
 }
