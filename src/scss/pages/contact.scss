@@ -83,12 +83,6 @@ body {
     }
 }
 
-#lineDown {
-    width: 100px;
-    animation-duration: 3s;
-    animation-name: scrollDown;
-    animation-iteration-count: infinite;
-}
 
 .secondWrapper {
     margin: 0 auto;
@@ -182,17 +176,5 @@ body {
             color: $main-grey;
             cursor: pointer;
         }
-    }
-}
-
-@keyframes scrollDown {
-    from {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    to {
-        transform: translateY(0);
     }
 }
