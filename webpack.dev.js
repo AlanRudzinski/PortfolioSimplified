@@ -10,17 +10,34 @@ const multipleHtmlPlugins = htmlPageNames.map(name => {
     return new HtmlWebpackPlugin({
         filename: `${name}/index.html`,
         template: `./public/${name}.html`,
+        favicon: './public/static/favicon.png',
+        chunks: [`${name}`],
+
     })
 })
 
+const projectHtmlPageNames = ['promyk']
+
+const projectMultipleHtmlPlugins = projectHtmlPageNames.map(name => {
+    return new HtmlWebpackPlugin({
+        filename: `projects/${name}/index.html`,
+        template: `./public/projects/${name}/index.html`,
+        favicon: './public/static/favicon.png',
+        chunks: [`projectDescription`],
+
+
+    })
+})
 
 module.exports = merge(common, {
     mode: "development",
     output: {
         filename: "[name].js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
+        // publicPath: path.resolve(__dirname, "dist"),
+
     },
-    plugins: [...multipleHtmlPlugins],
+    plugins: [...multipleHtmlPlugins, ...projectMultipleHtmlPlugins],
     module: {
         rules: [
             {

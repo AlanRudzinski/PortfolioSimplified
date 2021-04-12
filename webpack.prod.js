@@ -13,6 +13,7 @@ const multipleHtmlPlugins = htmlPageNames.map(name => {
     return new HtmlWebpackPlugin({
         filename: `${name}/index.html`,
         template: `./public/${name}.html`,
+        favicon: './public/static/favicon.png',
         chunks: [`${name}`],
         hash: true,
         minify: {
@@ -22,12 +23,31 @@ const multipleHtmlPlugins = htmlPageNames.map(name => {
     })
 })
 
+const projectHtmlPageNames = ['promyk']
+
+const projectMultipleHtmlPlugins = projectHtmlPageNames.map(name => {
+    return new HtmlWebpackPlugin({
+        filename: `projects/${name}/index.html`,
+        template: `./public/projects/${name}/index.html`,
+        favicon: './public/static/favicon.png',
+        chunks: [`projectDescription`],
+        hash: true,
+        minify: {
+            collapseWhitespace: true,
+            removeComments: true
+        }
+    })
+})
+
+
 
 module.exports = merge(common, {
     mode: "production",
     output: {
         filename: "[name].[chunkhash].js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
+        // publicPath: path.resolve(__dirname, "dist"),
+
     },
     optimization: {
         minimizer: [
@@ -36,6 +56,7 @@ module.exports = merge(common, {
             new HtmlWebpackPlugin({
                 filename: `index.html`,
                 template: `./public/index.html`,
+                favicon: './public/static/favicon.png',
                 chunks: [`index`],
                 hash: true,
                 minify: {
@@ -43,7 +64,9 @@ module.exports = merge(common, {
                     removeComments: true
                 }
             }),
-        ].concat(multipleHtmlPlugins)
+            ...multipleHtmlPlugins,
+            ...projectMultipleHtmlPlugins
+        ]
     },
     plugins: [
         new MiniCssExtractPlugin([{filename: "[name].[hash].css"}]),
