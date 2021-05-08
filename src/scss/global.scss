@@ -62,7 +62,7 @@ input:-webkit-autofill:active
             font-family: 'Kumar One', cursive;
             color: $main-orange;
             &:hover::after {
-                content: "alan.dev";
+                content: "alan.xyz";
             }
             &::after {
                 content: "alan";

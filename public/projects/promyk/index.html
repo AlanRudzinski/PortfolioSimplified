@@ -9,12 +9,15 @@
     <!-- <link rel="shortcut icon" type="image/png" href="../../src/static/favicon.png"/> -->
 </head>
 <body>
+    <nav class="logo">
+        <h1 class="logo-text slide-text-on-load slide-on-hover-reverse"><a href="/projects"></a></h1>
+    </nav>
     <div class="wrapper">
         <header>
             <h1 class="project-name">Akademia Promyk</h1>
             <span class="project-tags">#gatsbyjs #styledcomponents #datoCMS #githubActions </span>
             <!-- <span class="project-description">Polish kindergarden "Akademia Promyk"</span> -->
-
+            <span class="project-tags">You can see project live here: <a target="_blank" href="https://gifted-archimedes-2e7810.netlify.app/">Link</a> </span>
         </header>
         <img class="project-image" src="promyk.png" alt="Image of a kindergarten website">
     
@@ -24,20 +27,50 @@
             Important requirement of this website is possibility to edit content by non-technical person with simple use of CMS.
             One of the most important upsides of this kindergarten is colorful garden and the second one are really interesting activities - to show this impressive aspects interactive gallery is nessecary.
         </p>
-        <img class="project-image" src="../../static/promykGarden.png" alt="Image of a garden in a kindergarten">
+        <img class="project-image" src="./promykGarden.png" alt="Image of a garden in a kindergarten">
         <h2 class="section-title">Technologies</h2>
         <p class="project-description">
             I decided to use GatsbyJS because of its impressive SEO potential and good optimization of images. 
             To manage content of the website I used DatoCMS combining with GitHub Actions to trigger build website on the server.
         </p>
+        <h2 class="section-title">DatoCMS</h2>
         <p class="project-description">
-            You can see project live here: link do strony
+            Website is gonna be administrated by non-technical person so I decided to use DatoCMS to manage content of the webiste.
+            There was to reasons I decided to go with this solution:
+            <ul class="project-ul">
+                <li>It's free</li>
+                <li>It's often used with GatsbyJS, so there is plenty of documentation</li>
+            </ul>
         </p>
         <p class="project-description">
-            Project is hosted on netlify at this moment and not used in production. 
+            <br>
+
+            So the base integration with netlify hosting was quite easy to configure.
+            <br>
+            I have started to have some problems while trying to configure automatic deploy on my shared web server hosting (<a target="_blank" href="https://mydevil.net">mydevil.net</a>).
+            The only possible solution that came up to my mind was using Github Actions - which I have never used before.
         </p>
+
+        <h2 class="section-title">Lighthouse results</h2>
+        <img class="project-image" src="./lighthouse.png" alt="Image of lighthouse results 91/100 performance 85/100 accessability 100/100 best practices 100/100 SEO">
         <p class="project-description">
-            Website will be used realeased in next academic year - September 2021
+            <br>
+            The image shows that the goal result of 100/100 SEO points 
+            in Google Lighthouse audit could be easly achived by using GatsbyJS.
+            Another conclusions from Lighthouse audit are that there is still room to improve performance and accessability.
+        </p>
+        
+        <h2 class="section-title">What's next?</h2>
+        <p class="project-description">
+            Project is pretty much finished and waiting to be deployed on realease date.
+            <br>
+            The website is hosted on netlify at this moment and not used in production. 
+            <br>
+            Altough will be realeased in next academic year - September 2021
+            <br>
+            <br>
+            You can see project live here: <a target="_blank" href="https://gifted-archimedes-2e7810.netlify.app/">Link</a>
+
         </p>
     </div>
     <!-- <script src="../../src/projectDescription.js"></script> -->

@@ -9,22 +9,37 @@
     display: grid;
     justify-items: flex-start;
     align-items: center;
-    font-family: 'Kumar One', cursive;
     padding-left: 10vw;
     &__item {
         max-height: 160px;
         transition: ease-in-out .2s;
         margin-bottom: 6rem;
+        position: relative;
         &:hover {
             transform: translateX(80px);
         }
         & h2 {
-            @include fluid-type(320px, 1800px, 28px, 100px);
+            @include fluid-type(320px, 1800px, 24px, 90px);
             color: white;
+            font-family: 'Kumar One', cursive;
+
         }
         & span {
             @include fluid-type(320px, 1800px, 12px, 40px);
         }
 
+    }
+}
+
+.disabled {
+    opacity: .5;
+    pointer-events: none;
+    &-hammer {
+        width: 50px;
+        height: 50px;
+        color: white;
+        position: absolute;
+        right: -100px;
+        top: 10px;
     }
 }

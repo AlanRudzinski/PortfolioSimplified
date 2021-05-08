@@ -16,7 +16,7 @@ const multipleHtmlPlugins = htmlPageNames.map(name => {
     })
 })
 
-const projectHtmlPageNames = ['promyk']
+const projectHtmlPageNames = ['promyk', 'craftstore']
 
 const projectMultipleHtmlPlugins = projectHtmlPageNames.map(name => {
     return new HtmlWebpackPlugin({
