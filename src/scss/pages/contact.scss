@@ -33,6 +33,10 @@ body {
         max-width: 70%;
         font-family: 'Play', sans-serif;
         margin: 0 0 50px 0;
+        & a {
+            color: $main-orange;
+            text-decoration: underline;
+        }
         @include fluid-type(320px, 1800px, 14px, 50px);
         @media(min-width: 700px) {
             margin: 0 50px 0 0;
@@ -92,6 +96,10 @@ body {
     & .text {
         color: $main-orange;
         text-align: center;
+        & a {
+            color: $main-orange;
+            text-decoration: underline;
+        }
         @include fluid-type(320px, 1800px, 12px, 30px);
     }
 }
@@ -173,9 +181,4 @@ body {
             cursor: pointer;
         }
     }
-}
-
-a {
-    color: $main-orange;
-    text-decoration: underline;
 }
